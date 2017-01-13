@@ -1,0 +1,1 @@
+CREATE TABLE Synonyms (word VARCHAR(20), one VARCHAR(20), two VARCHAR(20), three VARCHAR(20), four VARCHAR(20), PRIMARY KEY(word));

@@ -1,0 +1,30 @@
+{% block content %}
+
+    <h1>Notes Editor</h1>
+    {% if edit %}
+        <p class="imp">
+          Here are some suggestions for you!
+        </p>
+        <form method = "POST">
+            <tr>
+                <td>New note: <input type = "text" name = "notetext" maxlength="1000" id="review_note"></td>
+                <td><input type = "hidden" name = "op" value = "review" /></td>
+                <td><input type = "submit" value = "Edit my note" id="review_note_submit"/></td>
+                <td></td>
+            </tr>
+        </form>
+
+        {% for item in edits_dict %}
+            <tr>
+                <li>
+                    <p class="suggestion"> 
+                        {{ edits_dict[item].word }} {{ edits_dict[item].one }} {{ edits_dict[item].two }} {{ edits_dict[item].three }} {{ edits_dict[item].four }}
+                    </p>
+                </li>
+            </tr>
+        {% endfor %}
+
+    {% endif %}
+
+
+{% endblock %}
